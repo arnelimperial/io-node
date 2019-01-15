@@ -1,2 +1,62 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<h2 class="page-header">HOME PAGE</h2>
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab beatae eius doloribus doloremque maxime, quasi obcaecati ex rem similique iusto dolor distinctio saepe cumque velit quam soluta. Veniam, voluptatum reiciendis.</p>
+<button type="button" class="w3-btn w3-round-xxlarge w3-card-4" id="btn-signin" data-toggle="modal" data-target="#modal-center">
+        Create an Account
+    </button>
+    {{# if errors }}
+        <section class="success" style="margin-top: 15px;">
+            <ul>
+                <span class="w3-small w3-text-deep-orange w3-animate-right"><strong><i class="fas fa-exclamation-triangle"></i> Failed Sign-Up: Input Errors!</strong></span>
+                     {{# each errors }}
+                    <li class="w3-small w3-text-red w3-animate-right">{{ this.msg }}</li>
+                    {{/each}}
+             </ul>
+        </section>
+    {{/if}}
+
+    
+                <div class="modal fade" id="modal-center" tabindex="-1" role="dialog" aria-labelledby="modalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Sign-Up Form</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="/" method="POST" name="form1" id="formR" novalidate>
+                                    <div class="form-group">
+                                        <label for="username"></label>
+                                        <input type="text" class="w3-input w3-animate-input" id="name01" placeholder="Username" name="username" autocomplete="off">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email"></label>
+                                        <input type="email" class="w3-input w3-animate-input" id="email01" placeholder="Email" name="email" autocomplete="off">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password"></label>
+                                        <input type="password" class="w3-input w3-animate-input" id="pwd01" placeholder="Password" name="password" autocomplete="off">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password"></label>
+                                        <input type="password" class="w3-input w3-animate-input" id="pwd02" placeholder="Password(Confirmed)" name="passwordC" autocomplete="off">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <input type="submit" value="Submit" onclick="submitForm()" class="w3-btn w3-black w3-round-xlarge" id="sub-btn">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal" id="sub-btn">Close</button>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                    
+                
+                <script src="/javascripts/submit.js"></script>
+    
+

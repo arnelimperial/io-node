@@ -1,0 +1,22 @@
+
+{{# if success}} 
+    <div class="w3-container success w3-panel w3-round-xlarge w3-card-3 w3-indigo">
+        </i> <p class="w3-text-white w3-animate-right w3-margin"><i class="fas fa-check"></i> Hi {{data1}} ({{data2}})!<br>You're account was created. Login to access DAShBOARD.</p>
+
+    </div>
+
+
+{{/if}}
+<h2 class="page-header">LOGIN</h2>
+                  <form action="/login" method="POST" novalidate>
+                       <div class="form-group">
+                         <label for="username"></label>
+                         <input type="text" class="w3-input w3-animate-input" id="email11" placeholder="Username" name="username">
+                       </div>
+                       <div class="form-group">
+                         <label for="password"></label>
+                         <input type="password" class="w3-input w3-animate-input" id="pwd11" placeholder="Password" name="password">
+                       </div>
+                       
+                       <button type="submit" class="w3-btn w3-black w3-round-large w3-margin-top">Login</button>
+                     </form>

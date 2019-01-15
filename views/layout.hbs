@@ -1,10 +1,98 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{title}}</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    {{{body}}}
-  </body>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css?family=Play:400,700" rel="stylesheet">
+    
+
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Forms</a>
+            </div>
+            <ul class="nav navbar-right navbar-nav" id="navigation">
+            
+                    <li><a href='/'>{{home}}</a></li>
+                    <li><a href='/homeD'>{{homeD}}</a></li>
+                    <li><a href='/dashboard'>{{dashboard}}</a></li>
+                    <li><a href='/login'>{{login}}</a></li>
+                    <li><a href='/logout'>{{logout}}</a></li>
+                    
+            
+                    
+            
+                
+
+                
+          
+            </ul>
+        </div>
+        
+    </nav>  
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                {{# if success_msg }}
+                    <div class="w3-container w3-animate-right w3-panel w3-pale-green w3-round-xlarge w3-card-4 w3-margin">
+                        <p class="w3-text-grey" style="text-align: center;">{{success_msg}}</p>
+
+                    </div>
+
+                {{/if}}
+
+                 {{# if error_msg }}
+                    <div class="w3-container w3-animate-right w3-panel w3-round-large w3-red w3-card-4">
+                        <p class="w3-text-white" style="text-align: center;">{{error_msg}}</p>
+
+                    </div>
+
+                {{/if}} 
+
+                {{# if error }}
+                    <div class="w3-container w3-animate-right w3-panel w3-red w3-round-large w3-card-4">
+                        <p class="w3-text-white" style="text-align: center;">{{error}}</p>
+
+                    </div>
+
+                {{/if}} 
+                
+                {{{body}}}
+            </div>
+        </div>
+        <footer class="footer">
+            <p>&copy; 2019 Forms</p>
+        </footer>
+    </div>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+       
+      
+    
+
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+</body>
 </html>
