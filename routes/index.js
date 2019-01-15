@@ -37,6 +37,7 @@ router.post('/', urlencodedParser,function (req, res, next) {
      res.redirect('/');
      //res.render('/');
      req.session.error = null;
+     req.session.touch();
 
   }
   else{ 

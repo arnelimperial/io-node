@@ -40,7 +40,7 @@ app.use(passport.session());
 
 app.use(session({
   secret: 'keyboard cat',
-  resave: false,
+  resave: true,
   saveUninitialized: true
 }));
 
