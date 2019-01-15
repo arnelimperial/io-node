@@ -13,7 +13,7 @@ var User = require('../models/users');
 router.get('/', urlencodedParser, function (req, res, next) {
   res.render('index',{title: 'FORMS',errors: req.session.errors, login: 'Login', messages: req.flash('error_msg')});
   req.session.errors = null;
-  //errors: req.session.errors,
+  //errors: req.session.errors;
 });
 
 
@@ -33,15 +33,15 @@ router.post('/', urlencodedParser,function (req, res, next) {
 
   var errors = req.validationErrors();
   if(errors){
-     req.session.errors = errors;
-     req.session.success = false;
+     //req.session.errors = errors;
+     //req.session.success = false;
      //res.redirect('/');
      //res.render('/');
      //req.session.error = null;
      //return res.status(403);
      req.flash('error_msg', 'Invalid inputs. Please Sign-Up.');
      res.redirect('/');
-     req.session.errors = null;
+     //req.session.errors = null;
     
 
   }
