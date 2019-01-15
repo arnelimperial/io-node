@@ -33,9 +33,10 @@ router.post('/', urlencodedParser,function (req, res, next) {
   var errors = req.validationErrors();
   if(errors){
      req.session.errors = errors;
-     req.session.success = false;
+     //req.session.success = false;
      res.redirect('/');
-     //req.session.error = null;
+     //res.render('/');
+     req.session.error = null;
 
   }
   else{ 
