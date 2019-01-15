@@ -1,0 +1,3 @@
+views/* linguist-vendored
+
+*.js linguist-language=Javascript
