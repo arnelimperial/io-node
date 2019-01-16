@@ -47,7 +47,10 @@ router.post('/', urlencodedParser,function (req, res, next) {
   }
   else{ 
     req.session.success = true;
-    res.render('login', {data1: req.body.username, data2: req.body.email, success: req.session.success});
+   // res.render('login', {data1: req.body.username, data2: req.body.email, success: req.session.success});
+   req.flash('success_msg', "Hi! Thank you for signing-up. Please login to your account.");
+   res.redirect('/login');
+
     req.session.success = null;
   
      var newUser = new User({
