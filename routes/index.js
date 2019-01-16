@@ -125,7 +125,7 @@ router.get('/login',urlencodedParser, function(req, res, next) {
 });
 
 router.post('/login',
-  passport.authenticate('local',  { successRedirect:'/dashboard', failureRedirect: '/login', failureFlash: true}),
+  passport.authenticate('local',  { successRedirect:'/users/dashboard', failureRedirect: '/login', failureFlash: true}),
   function(req, res) {
   
     
@@ -133,7 +133,7 @@ router.post('/login',
     
 });
 
-
+/*
 
 router.get('/dashboard', urlencodedParser, function(req, res, next){
   
@@ -160,6 +160,6 @@ function ensureAuthenticated(req,res,next){
     
   }
 }
-
+*/
 
 module.exports = router;
