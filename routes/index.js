@@ -124,7 +124,7 @@ passport.serializeUser(function(user, done) {
 
 router.get('/login',urlencodedParser, function(req, res, next) {
   
-  res.render('login',{home: 'Home'});
+  res.render('login',{home: 'Home', messages: req.flash('success_msg')});
 });
 
 router.post('/login',
