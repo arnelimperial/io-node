@@ -12,9 +12,12 @@ var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
+var uri = 'mongodb://data5Z:*/*/Basic7@ds211083.mlab.com:11083/data';
 //mongoose.connect('mongodb://localhost:27017/log', { useNewUrlParser: true });
-mongoose.connect('mongodb://data5Z:*/*/Basic7@ds211083.mlab.com:11083/data');
-var db = mongoose.connection;
+mongoose.connect(uri, { useMongoClient: true }, () => {
+  console.log("Database connected.");
+});
+//var db = mongoose.connection;
 
 
 var indexRouter = require('./routes/index');
