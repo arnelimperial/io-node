@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var bcrypt = require('bcrypt-nodejs');
-mongoose.connect('mongodb://data5Z:*/*/Basic7@ds211083.mlab.com:11083/data');
-var db = mongoose.connection;
+//mongoose.connect('mongodb://data5Z:*/*/Basic7@ds211083.mlab.com:11083/data');
+//var db = mongoose.connection;
 
 
 var UserSchema = mongoose.Schema({
