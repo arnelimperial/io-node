@@ -4,9 +4,13 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false });
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var router = express.Router();
-//var mongoose = require('mongoose');
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://data5Z:*/*/Basic7@ds211083.mlab.com:11083/data');
+var db = mongoose.connection;
+
 //var bcrypt = require('bcryptjs');
 //mongoose.connect('mongodb://localhost:27017/log', { useNewUrlParser: true });
+
 var User = require('../models/users');
 
 
