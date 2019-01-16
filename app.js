@@ -12,7 +12,8 @@ var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/log', { useNewUrlParser: true });
+//mongoose.connect('mongodb://localhost:27017/log', { useNewUrlParser: true });
+mongoose.connect('mongodb://data5Z:*/*/Basic7@ds211083.mlab.com:11083/data');
 var db = mongoose.connection;
 
 
