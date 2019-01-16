@@ -26,7 +26,7 @@ router.get('/logout', function(req, res){
 
 });
 
-router.get('/homeD', function(req, res, next){
+router.get('/homeD',ensureAuthenticated, function(req, res, next){
     //res.render('homeD', {dashboard: 'Dashboard', logout: 'Logout'});
     res.render('homeD', {dashboard: 'Dashboard', logout: 'Logout'});
 });
